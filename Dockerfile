@@ -8,7 +8,7 @@ COPY src ./src
 
 RUN mvn dependency:go-offline
 
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # 运行阶段：使用轻量级 JDK
 FROM eclipse-temurin:17-jre-alpine
