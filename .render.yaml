@@ -1,6 +1,7 @@
 services:
   - type: web
     name: addressbook
+    env: java
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
