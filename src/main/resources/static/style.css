@@ -1,0 +1,19 @@
+body {
+  background-color: #f9f9fb;
+}
+
+#actionBar .btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.empty-row td {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
