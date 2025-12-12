@@ -1,4 +1,4 @@
-# 构建阶段：使用 Maven 编译
+# 构建阶段
 FROM maven:3.9-eclipse-temurin-17 AS builder
 
 WORKDIR /app
@@ -8,9 +8,10 @@ COPY src ./src
 
 RUN mvn dependency:go-offline
 
+# 跳过测试，避免依赖冲突
 RUN mvn clean package -DskipTests
 
-# 运行阶段：使用轻量级 JDK
+# 运行阶段
 FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
