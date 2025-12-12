@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: addressbook
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: JAVA_OPTS
+        value: "-Xmx384m"
